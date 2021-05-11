@@ -23,5 +23,6 @@
 
 ### 优秀开源项目
  - [《后端架构师技术图谱》](https://github.com/xingshaocheng/architect-awesome)
+ - [Pythonic Data Structures and Algorithms](https://github.com/keon/algorithms)
 <br/>
    
