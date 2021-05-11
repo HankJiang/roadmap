@@ -9,4 +9,4 @@
 ### git相关
 
 ---
-[本地多github账号配置](./git_skills/本地多github账号配置.md)
+[本地多github账号配置](./git/本地多github账号配置.md)
