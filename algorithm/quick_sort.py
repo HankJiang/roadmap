@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from tools.performance import timer_func
 
 # 快速排序：对 arr 中 l 到 r 位进行排序
 # arr : 待排序数组
@@ -33,7 +34,11 @@ def quick_sort(arr, left, right):
     quick_sort(arr, left_index + 1, right)
 
 
-if __name__ == '__main__':
+@timer_func
+def test():
     nums = [5, 1, 3, 4, 9, 6, 2, 7, 0, 8]
     quick_sort(nums, 0, 9)
     print(nums)
+
+if __name__ == '__main__':
+    test()
