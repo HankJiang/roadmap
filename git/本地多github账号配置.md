@@ -46,8 +46,12 @@
 
 5. 配置仓库
     
-     ```bash
+    ```bash
+    # 新仓库
     > git clone git@{configed_host}:{remote_user}/{remote_project}.git your_local_project_dir
+    # 已有仓库
+    > cd your_local_project_dir
+    > git remote set-url origin git@{configed_host}:{remote_user}/{remote_project}.git
     ```
 <br />
 
