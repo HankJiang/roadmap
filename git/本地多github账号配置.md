@@ -55,6 +55,7 @@
 6. 测试验证
    
     ```bash
+    # 对本地项目做一些更改
     > git add .
     > git commit -m "your comments"
     > git push
