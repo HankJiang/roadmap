@@ -51,27 +51,12 @@
     ```
 <br />
 
+
+5. 测试验证
    
-### HTTPS方式
-
-1. 配置仓库
-
-    ```bash
-    # 从远程仓库复制仓库的https url
-    > git clone https://github.com/{remote_user}/{remote_project}.git your_local_project_dir
-    > cd  your_local_project_dir
-    > git config user.name "account1"
-    > git config user.email "account1@youremail.com"
-    ```
-<br />
-
-
----
-
-#### 测试验证
-
     ```bash
     > git add .
     > git commit -m "your comments"
     > git push
     ```
+<br />
