@@ -38,13 +38,13 @@
     ```
 <br />
 
-5. 去github配置共钥 
+4. 去github配置共钥 
    - 登录github账号 -> Settings -> SSH and GPG keys -> New SSH key
    - 将本地 `~/.ssh/id_rsa_accountX.pub` 公钥内容粘贴进表单并提交
 
 <br /> 
 
-4. 配置仓库
+5. 配置仓库
     
      ```bash
     > git clone git@{configed_host}:{remote_user}/{remote_project}.git your_local_project_dir
@@ -52,7 +52,7 @@
 <br />
 
 
-5. 测试验证
+6. 测试验证
    
     ```bash
     > git add .
