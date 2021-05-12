@@ -1,8 +1,9 @@
-### 场景：
+## 场景
 做为一名coder, 一定拥有自己的github账号和项目，同时在工作时，可能会额外申请一个github账号加入公司的organization，
 为了让不同的项目可以push到不同的账号仓库，此时就需要在本地机器上为每一个github账号配置对应的ssh key，具体步骤如下。
 
 ---
+### SSH方式
 
  1. 为每个账号生成密钥对
     ```bash
@@ -28,39 +29,49 @@
     > cd ~/.ssh
     > vim config # 如果之前没有配置过，手动创建
     Host account_self # 可以任意起一个名字
-        HostName github.com/account1
-        User account1
+        HostName github.com
         IdentityFile ~/.ssh/id_rsa_account1
 
     Host account_company
-        HostName github.com/account2
-        User account2
+        HostName github.com
         IdentityFile ~/.ssh/id_rsa_account2
-    ```
-<br />
-
-4. 配置仓库
-     ```bash
-    > cd your_self_repo
-    > git config user.name "account1"
-    > git config user.email "account1@youremail.com"
-    
-    > cd your_company_repo
-    > git config user.name "account2"
-    > git config user.email "account2@youremail.com"
     ```
 <br />
 
 5. 去github配置共钥 
    - 登录github账号 -> Settings -> SSH and GPG keys -> New SSH key
    - 将本地 `~/.ssh/id_rsa_accountX.pub` 公钥内容粘贴进表单并提交
-    
-<br />   
 
-6. 测试验证
+<br /> 
+
+4. 配置仓库
+    
+     ```bash
+    > git clone git@{configed_host}:{remote_user}/{remote_project}.git your_local_project_dir
+    ```
+<br />
+
+   
+### HTTPS方式
+
+1. 配置仓库
+
+    ```bash
+    # 从远程仓库复制仓库的https url
+    > git clone https://github.com/{remote_user}/{remote_project}.git your_local_project_dir
+    > cd  your_local_project_dir
+    > git config user.name "account1"
+    > git config user.email "account1@youremail.com"
+    ```
+<br />
+
+
+---
+
+#### 测试验证
+
     ```bash
     > git add .
     > git commit -m "your comments"
     > git push
     ```
-
