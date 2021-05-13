@@ -16,6 +16,10 @@
  - [k8s高效命令行配置](./k8s/k8s高效命令行配置.md)
 <br/>
 
+### postgre
+- [用户和数据库初始化](./postgres/用户和数据库初始化.md)
+<br/>
+
 ## 其他资源
 ### 开源项目
 - [《后端架构师技术图谱》](https://github.com/xingshaocheng/architect-awesome)
